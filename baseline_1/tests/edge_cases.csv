@@ -1,0 +1,4 @@
+id,name,description,category
+empty,,,БАД
+tags,"<name>, \"quoted\";",text with newline,Легковоспламеняющиеся
+unknown,ordinary, ,unknown

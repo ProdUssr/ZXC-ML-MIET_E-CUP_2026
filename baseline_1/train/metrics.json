@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "split_id": "group_text_sha256_v1:f=0.150000:e4a2bcaecde4b587",
+  "total_rows": 12971,
+  "fit_rows": 11024,
+  "holdout_rows": 1947,
+  "duplicate_groups": 1778,
+  "thresholds_p_regulated": {
+    "БАД": 0.47547974413646055,
+    "Легковоспламеняющиеся": 0.9278846153846154
+  },
+  "train_metrics": {
+    "category_macro_mean": 0.6017278008211067,
+    "category_positive_mean": 0.5020728508132085,
+    "global_macro": 0.7841350509409949,
+    "by_category": {
+      "Легковоспламеняющиеся": {
+        "macro": 0.5291062045492425,
+        "positive": 0.16163583252190847
+      },
+      "БАД": {
+        "macro": 0.6743493970929709,
+        "positive": 0.8425098691045086
+      }
+    }
+  },
+  "holdout_metrics": {
+    "category_macro_mean": 0.6100745377416634,
+    "category_positive_mean": 0.5215648282251015,
+    "global_macro": 0.7939636324291801,
+    "by_category": {
+      "БАД": {
+        "macro": 0.6725784540144002,
+        "positive": 0.851039260969977
+      },
+      "Легковоспламеняющиеся": {
+        "macro": 0.5475706214689265,
+        "positive": 0.192090395480226
+      }
+    }
+  }
+}

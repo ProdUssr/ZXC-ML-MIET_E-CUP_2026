@@ -1,0 +1,77 @@
+{
+  "label_mapping": "direct",
+  "priors_p_label1": {
+    "БАД": 0.7449,
+    "Легковоспламеняющиеся": 0.036,
+    "__default__": 0.4442
+  },
+  "thresholds_p_regulated": {
+    "БАД": 0.47547974413646055,
+    "Легковоспламеняющиеся": 0.9278846153846154,
+    "__default__": 0.5
+  },
+  "stages": [
+    {
+      "predictor": "rules",
+      "escalate_band": [
+        0.0,
+        1.0
+      ],
+      "min_level": "L4",
+      "params": {}
+    }
+  ],
+  "batch_size": 256,
+  "flush_interval_sec": 5.0,
+  "calibration_path": "calibration.json",
+  "deadline": {
+    "planned_fraction": 0.85,
+    "reserve_sec": 60.0,
+    "levels": [
+      {
+        "level": "L4",
+        "forecast_ratio": 1.0,
+        "max_images": 0,
+        "max_image_side": 0,
+        "allow_generation": false,
+        "allow_escalation": false
+      },
+      {
+        "level": "L3",
+        "forecast_ratio": 0.95,
+        "max_images": 0,
+        "max_image_side": 0,
+        "allow_generation": false,
+        "allow_escalation": false
+      },
+      {
+        "level": "L2",
+        "forecast_ratio": 0.9,
+        "max_images": 0,
+        "max_image_side": 0,
+        "allow_generation": false,
+        "allow_escalation": true
+      },
+      {
+        "level": "L1",
+        "forecast_ratio": 0.8,
+        "max_images": 1,
+        "max_image_side": 640,
+        "allow_generation": false,
+        "allow_escalation": true
+      },
+      {
+        "level": "L0",
+        "forecast_ratio": 0.0,
+        "max_images": 3,
+        "max_image_side": 896,
+        "allow_generation": true,
+        "allow_escalation": true
+      }
+    ]
+  },
+  "calibration": {
+    "note": "Rule evidence direction is learned from train signatures with Laplace smoothing.",
+    "data": "organiser data.csv, 12971 rows, inspected 2026-08-16"
+  }
+}
